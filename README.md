@@ -41,9 +41,39 @@ PostgreSQL 12
 * The non-null box office data is converted to string values using the lambda and join functions.
 * A regular expression is used to match the six elements of "form_one" of the box office data.
 * A regular expression is used to match the three elements of "form_two" of the box office data.
-- The following columns are cleaned in the Wikipedia DataFrame: (8 pt)
+
+- The following columns are cleaned in the Wikipedia DataFrame: 
+
  a. The box office column
+ 
  b. The budget column
+ 
  c. The release date column
+ 
  d. The running time column
+ 
 - Cleaned Wikipedia data is converted to a Pandas DataFrame, and the DataFrame is displayed in the ETL_clean_wiki_movies.ipynb file. 
+
+*Deliverable 3*
+
+- The extraction and transformation of the Kaggle metadata using the ETL function does the following:
+
+- The Kaggle metadata is cleaned.
+- The Wikipedia and Kaggle DataFrames are merged. 
+- The following is performed on the merged Wikipedia and Kaggle DataFrames to create the movies_df:
+
+a. Unnecessary columns are dropped.
+
+b. A function is used to fill in the missing Kaggle data.
+
+c.The movies_df DataFrame is filtered to keep specific columns.
+
+d. The movies_df DataFrame columns are renamed.
+
+- The extraction and transformation of the MovieLens ratings data using the ETL function does the following
+
+- The ratings counts are cleaned.
+- The movies_df DataFrame is merged with the cleaned ratings DataFrame to create the movies_with_ratings_df DataFrame.
+- The empty values in the movies_with_ratings_df DataFrame are filled with “0”. 
+
+- The movies_with_ratings_df and the movies_df DataFrames are displayed in the ETL_clean_kaggle_data.ipynb file
