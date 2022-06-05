@@ -59,7 +59,9 @@ PostgreSQL 12
 - The extraction and transformation of the Kaggle metadata using the ETL function does the following:
 
 -- The Kaggle metadata is cleaned.
+
 -- The Wikipedia and Kaggle DataFrames are merged. 
+
 -- The following is performed on the merged Wikipedia and Kaggle DataFrames to create the movies_df:
 
 a. Unnecessary columns are dropped.
@@ -73,6 +75,7 @@ d. The movies_df DataFrame columns are renamed.
 - The extraction and transformation of the MovieLens ratings data using the ETL function does the following
 
 -- The ratings counts are cleaned.
+
 -- The movies_df DataFrame is merged with the cleaned ratings DataFrame to create the movies_with_ratings_df DataFrame.
 -- The empty values in the movies_with_ratings_df DataFrame are filled with “0”. 
 
